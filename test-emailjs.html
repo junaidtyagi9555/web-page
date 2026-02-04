@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test EmailJS</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with YOUR public key
+        (function() {
+            emailjs.init('P4eHnSbBdVEX-hs5A');
+        })();
+        
+        function sendTestEmail() {
+            emailjs.send('service_a7zqpft', 'template_noyrtgh', {
+                from_name: 'Test User',
+                from_email: 'test@example.com',
+                subject: 'Test from Portfolio',
+                message: 'This is a test message from EmailJS setup.',
+                timestamp: new Date().toLocaleString()
+            })
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Test email sent successfully! Check your Gmail.');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send test email: ' + JSON.stringify(error));
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>EmailJS Test</h1>
+    <button onclick="sendTestEmail()">Send Test Email</button>
+    <p>Check your Gmail after clicking.</p>
+</body>
+</html>
