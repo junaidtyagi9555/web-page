@@ -1,5 +1,5 @@
 Junaid Alam Tyagi | DevOps Engineer Portfolio 👨‍💻
-https://webpage.jpg
+https://junaidtyagi.netlify.app/
 
 A modern, terminal-inspired portfolio website showcasing DevOps expertise with 4+ years of experience in AWS, Docker, Kubernetes, and infrastructure automation.
 
