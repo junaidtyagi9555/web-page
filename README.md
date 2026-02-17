@@ -1,6 +1,6 @@
 # DevOps Portfolio ⚡
 
-![Portfolio Preview](./webpage.jpg)
+![Portfolio](Screenshots/webpage.jpg)
 
 A terminal-themed portfolio showcasing 4+ years of DevOps & Cloud engineering expertise. Fully responsive with working contact form and resume download.
 
@@ -19,6 +19,13 @@ A terminal-themed portfolio showcasing 4+ years of DevOps & Cloud engineering ex
 **Frontend:** HTML5, CSS3, JavaScript  
 **Services:** EmailJS, Google Drive  
 **DevOps Tools:** AWS, Docker, Kubernetes, Terraform, Jenkins
+
+## 📸 Screenshots
+
+| Description | Screenshot |
+|--------------|-------------|
+| Gmail(message) | ![Email received](Screenshots/email-received.jpg) |
+| web(notificatio) | ![web-heading](Screenshots/web-notification.jpg) |
 
 ## 🚀 Quick Start
 
