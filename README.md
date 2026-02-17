@@ -25,7 +25,7 @@ A terminal-themed portfolio showcasing 4+ years of DevOps & Cloud engineering ex
 | Description | Screenshot |
 |--------------|-------------|
 | Gmail(message) | ![Email received](Screenshots/email-received.jpg) |
-| web(notificatio) | ![web-heading](Screenshots/web-notification.jpg) |
+| web | ![web-heading](Screenshots/web-notification.jpg) |
 
 ## 🚀 Quick Start
 
