@@ -3,507 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junaid Alam Tyagi | DevOps Engineer Portfolio</title>
+    <title>Junaid Alam Tyagi · DevOps & Cloud Engineer</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Junaid Alam Tyagi - DevOps & Cloud Engineer with 4+ years experience in AWS, Docker, Kubernetes, Terraform, and CI/CD">
+    <meta name="description" content="Junaid Alam Tyagi - DevOps & Cloud Engineer with hands‑on experience in AWS, Docker, Kubernetes, Terraform, and CI/CD pipelines.">
     <meta name="keywords" content="DevOps, Cloud Engineer, AWS, Docker, Kubernetes, Terraform, CI/CD, Linux, Infrastructure">
     <meta name="author" content="Junaid Alam Tyagi">
-    
-    <!-- Open Graph Tags for Social Sharing -->
-    <meta property="og:title" content="Junaid Alam Tyagi | DevOps Engineer Portfolio">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Junaid Alam Tyagi | DevOps Engineer">
     <meta property="og:description" content="DevOps & Cloud Engineer specializing in AWS, Docker, Kubernetes, and CI/CD">
-    <meta property="og:image" content="https://junaidtyagi.netlify.app/og-image.jpg">
     <meta property="og:url" content="https://junaidtyagi.netlify.app">
     <meta property="og:type" content="website">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Fonts & Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     
-    <!-- External CSS -->
+    <!-- Bootstrap CSS (minimal grid) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS (separate file) -->
     <link rel="stylesheet" href="style.css">
-    
-    <style>
-        /* Enhanced CSS with better responsiveness */
-        :root {
-            --terminal-bg: #1e1e1e;
-            --terminal-green: #4AF626;
-            --terminal-cyan: #00ffff;
-            --terminal-purple: #9d00ff;
-            --terminal-yellow: #ffd700;
-            --terminal-red: #ff5555;
-            --text-light: #f0f0f0;
-            --text-dark: #333;
-            --bg-dark: #0a0a0a;
-            --card-bg: rgba(255, 255, 255, 0.05);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Ubuntu', sans-serif;
-            background: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Header & Navigation - Enhanced Mobile */
-        header {
-            background: rgba(30, 30, 30, 0.98);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--terminal-green);
-            backdrop-filter: blur(10px);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Source Code Pro', monospace;
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            font-weight: 700;
-            color: var(--terminal-green);
-            text-shadow: 0 0 10px rgba(74, 246, 38, 0.3);
-        }
-        
-        .logo span {
-            color: var(--terminal-cyan);
-        }
-        
-        /* Mobile Menu Button */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--terminal-green);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: clamp(1rem, 2vw, 2rem);
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-family: 'Source Code Pro', monospace;
-            font-weight: 500;
-            font-size: 0.95rem;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s;
-            white-space: nowrap;
-        }
-        
-        .nav-links a:hover {
-            background: rgba(74, 246, 38, 0.1);
-            color: var(--terminal-green);
-        }
-        
-        /* Hero Section - Responsive */
-        .hero {
-            padding: 150px 0 80px;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        
-        .hero h1 {
-            font-family: 'Source Code Pro', monospace;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--terminal-green), var(--terminal-cyan));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1rem, 2vw, 1.5rem);
-            color: #aaa;
-            margin-bottom: 2rem;
-            font-family: 'Source Code Pro', monospace;
-        }
-        
-        .terminal-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin: 1.5rem 0;
-        }
-        
-        .terminal-badge {
-            display: inline-block;
-            background: var(--terminal-bg);
-            color: var(--terminal-green);
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-family: 'Source Code Pro', monospace;
-            font-size: clamp(0.8rem, 1vw, 0.9rem);
-            border: 1px solid var(--terminal-green);
-            white-space: nowrap;
-        }
-        
-        /* Terminal Sections */
-        .terminal-window {
-            background: var(--terminal-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 2rem auto;
-            max-width: 900px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border: 1px solid #333;
-        }
-        
-        .terminal-header {
-            background: #2d2d2d;
-            padding: 0.8rem 1rem;
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #444;
-        }
-        
-        .terminal-buttons {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .terminal-btn {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        
-        .close { background: #ff5f56; }
-        .minimize { background: #ffbd2e; }
-        .maximize { background: #27ca3f; }
-        
-        .terminal-title {
-            margin-left: 1rem;
-            color: #888;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 0.9rem;
-        }
-        
-        .terminal-body {
-            padding: clamp(1rem, 2vw, 2rem);
-            font-family: 'Source Code Pro', monospace;
-            font-size: clamp(0.9rem, 1vw, 1rem);
-            min-height: 300px;
-            overflow-y: auto;
-        }
-        
-        /* Skills Grid - Responsive */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .skill-category {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--terminal-green);
-            transition: transform 0.3s;
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-        
-        .skill-category h3 {
-            color: var(--terminal-green);
-            margin-bottom: 1rem;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 1.1rem;
-        }
-        
-        .skill-category ul {
-            list-style: none;
-        }
-        
-        .skill-category li {
-            padding: 0.5rem 0;
-            color: #aaa;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.95rem;
-        }
-        
-        .skill-category li:last-child {
-            border-bottom: none;
-        }
-        
-        /* Contact Form - Responsive */
-        .contact-form {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        @media (min-width: 768px) {
-            .contact-form {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .contact-form .form-group:last-child {
-                grid-column: span 2;
-            }
-        }
-        
-        /* Footer - Responsive */
-        footer {
-            background: rgba(30, 30, 30, 0.95);
-            padding: 2rem 0;
-            margin-top: 4rem;
-            border-top: 2px solid var(--terminal-green);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: rgba(30, 30, 30, 0.98);
-                flex-direction: column;
-                padding: 1rem;
-                gap: 0.5rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease;
-                z-index: 999;
-                border-bottom: 2px solid var(--terminal-green);
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .nav-links a {
-                padding: 1rem;
-                border-radius: 0;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            }
-            
-            .nav-links a:last-child {
-                border-bottom: none;
-            }
-            
-            .hero {
-                padding: 120px 0 60px;
-            }
-            
-            .terminal-body {
-                padding: 1rem;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-items {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .terminal-badges {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .terminal-badge {
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-        
-        /* Print Styles */
-        @media print {
-            header, footer, .terminal-header, button {
-                display: none !important;
-            }
-            
-            .terminal-window {
-                box-shadow: none;
-                border: 1px solid #ccc;
-            }
-            
-            body {
-                background: white;
-                color: black;
-                font-size: 12pt;
-            }
-        }
-        
-        /* Loading Animation */
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-dark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease-out;
-        }
-        
-        .loading.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .terminal-loader {
-            font-family: 'Source Code Pro', monospace;
-            color: var(--terminal-green);
-            font-size: 1.5rem;
-        }
-        
-        .terminal-loader span {
-            animation: dots 1.5s infinite;
-        }
-        
-        .terminal-loader span:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-        
-        .terminal-loader span:nth-child(3) {
-            animation-delay: 0.4s;
-        }
-        
-        @keyframes dots {
-            0%, 20% { opacity: 0; }
-            50%, 100% { opacity: 1; }
-        }
-        
-        /* Accessibility Improvements */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
-        
-        /* Focus Styles */
-        a:focus,
-        button:focus,
-        input:focus,
-        textarea:focus {
-            outline: 2px solid var(--terminal-green);
-            outline-offset: 2px;
-        }
-        
-        /* Skip to main content */
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--terminal-green);
-            color: var(--bg-dark);
-            padding: 8px;
-            z-index: 1001;
-            text-decoration: none;
-        }
-        
-        .skip-to-content:focus {
-            top: 0;
-        }
-    </style>
 </head>
 <body>
-    <!-- Skip to Content Link for Accessibility -->
+    <!-- Skip to Content -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
     
     <!-- Loading Screen -->
     <div class="loading" id="loading">
-        <div class="terminal-loader">
-            $ Loading portfolio<span>.</span><span>.</span><span>.</span>
-        </div>
+        <div class="loader"></div>
     </div>
-    
-    <!-- Navigation -->
+
+    <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">$ <span>Junaid Alam Tyagi</span></div>
+                <div class="logo">$ Junaid <span>Alam Tyagi</span></div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </button>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#about">whoami</a></li>
-                    <li><a href="#skills">ls -la skills/</a></li>
-                    <li><a href="#projects">cd projects/</a></li>
-                    <li><a href="#contact">mail</a></li>
-                    <li><a href="#" id="downloadResumeBtnNav"><i class="fas fa-download"></i> resume.pdf</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> whoami</a></li>
+                    <li><a href="#skills"><i class="fas fa-code"></i> skills/</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> projects/</a></li>
+                    <li><a href="#certifications"><i class="fas fa-medal"></i> badges/</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> contact/</a></li>
+                    <li><a href="#" id="downloadResumeNav"><i class="fas fa-download"></i> resume.pdf</a></li>
                 </ul>
             </nav>
         </div>
@@ -514,76 +70,92 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h1 id="heroTitle">$ echo "DevOps & Cloud Engineer"</h1>
-                    <p class="hero-subtitle">Building scalable infrastructure with code-first approach</p>
-                    <div class="terminal-badges">
-                        <span class="terminal-badge">AWS (SAA-C03 in Progress)</span>
-                        <span class="terminal-badge">4+ Years Experience</span>
-                        <span class="terminal-badge">Terraform</span>
-                        <span class="terminal-badge">Kubernetes</span>
-                        <span class="terminal-badge">Docker</span>
-                        <span class="terminal-badge">CI/CD</span>
+                <div class="row gy-5 align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <div class="hero-content" data-aos="fade-up">
+                            <h1>
+                                Creative 
+                                <span class="typed"></span>
+                            </h1>
+                            <p class="hero-subtitle">$ echo "Building scalable, resilient infrastructure with a code-first approach. 4+ years of experience in cloud native technologies."</p>
+                            
+                            <div class="badge-container">
+                                <span class="badge"><i class="fas fa-medal"></i> 5x Certifications</span>
+                                <span class="badge"><i class="fas fa-clock"></i> 4+ Years</span>
+                                <span class="badge"><i class="fas fa-cube"></i> Terraform</span>
+                                <span class="badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                                <span class="badge"><i class="fab fa-docker"></i> Docker</span>
+                            </div>
+
+                            <div class="d-flex gap-3 flex-wrap">
+                                <a href="#projects" class="btn-primary"><i class="fas fa-eye"></i> View Projects</a>
+                                <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Contact</a>
+                                <a href="#" id="downloadResumeHero" class="btn-outline"><i class="fas fa-download"></i> Resume</a>
+                            </div>
+                        </div>
                     </div>
-                    <button id="downloadResumeBtnHero" class="download-resume-btn">
-                        <i class="fas fa-download"></i> Download Resume
-                    </button>
-                    <a href="#contact" class="terminal-btn-submit" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                        <i class="fas fa-envelope"></i> Contact Me
-                    </a>
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <div class="hero-image-wrapper" data-aos="fade-up" data-aos-delay="200">
+                            <img src="Screenshots/image.jpg" alt="Junaid Tyagi" class="img-fluid" onerror="this.src='https://ui-avatars.com/api/?name=Junaid+Tyagi&size=400&background=2dde98&color=fff&length=2&bold=true'">
+                            <div class="floating-elements">
+                                <div class="floating-card aws">
+                                    <i class="fab fa-aws"></i> <span>AWS</span>
+                                </div>
+                                <div class="floating-card k8s">
+                                    <i class="fas fa-dharmachakra"></i> <span>Kubernetes</span>
+                                </div>
+                                <div class="floating-card iac">
+                                    <i class="fas fa-code"></i> <span>Infra as Code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about">
+        <section id="about" class="section">
             <div class="container">
-                <div class="terminal-window">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>whoami</h2>
+                    <p class="subtitle">about.sh</p>
+                </div>
+
+                <div class="terminal-card" data-aos="fade-up">
                     <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <div class="terminal-btn close"></div>
-                            <div class="terminal-btn minimize"></div>
-                            <div class="terminal-btn maximize"></div>
+                        <div class="terminal-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
                         </div>
                         <div class="terminal-title">about.sh</div>
                     </div>
-                    <div class="terminal-body" id="terminalOutput">
+                    <div class="terminal-body">
                         <div class="command-line">
                             <span class="prompt">$</span> <span class="command">whoami</span>
-                            <div class="output">junaid_tyagi | DevOps & Cloud Specialist</div>
+                            <div class="output"><span class="typed-about"></span></div>
                         </div>
-                        
-                        <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">pwd</span>
-                            <div class="output">/home/junaid/devops-portfolio</div>
-                        </div>
-                        
+
                         <div class="command-line">
                             <span class="prompt">$</span> <span class="command">cat experience.txt</span>
                             <div class="output">
-                                <p>✓ <strong>Executive Engineer</strong> @ Lava International (Jun 2024 - Present)</p>
-                                <p>  - Managed enterprise IT infrastructure ensuring high availability</p>
-                                <p>  - Implemented AWS-based cloud solutions for scalability</p>
-                                <p>  - Automated workflows using AWS Lambda and CloudFormation</p>
-                                
-                                <p>✓ <strong>System Engineer</strong> @ Jaypee Brothers Medical Publishers (Feb 2022 - Jun 2024)</p>
-                                <p>  - Deployed and maintained AWS EC2 instances for production</p>
-                                <p>  - Configured Amazon S3 for secure data storage and backups</p>
-                                <p>  - Assisted in implementing CI/CD pipelines for faster deployments</p>
-                                
-                                <p>✓ <strong>Desktop Support Engineer</strong> @ Max Smart Super Specialty Hospital (May 2021 - Feb 2022)</p>
-                                <p>  - Provided technical support for hospital IT infrastructure</p>
-                                <p>  - Server configuration and network troubleshooting</p>
+                                <p><strong>Executive Engineer @ Lava International</strong> (Jun 2024 - Present)<br>
+                                → Enterprise IT infrastructure · AWS cloud solutions · Automation</p>
+                                <p><strong>System Engineer @ Jaypee Brothers</strong> (Feb 2022 - Jun 2024)<br>
+                                → AWS EC2, S3 · CI/CD pipelines · Infrastructure automation</p>
+                                <p><strong>Desktop Support Engineer @ Max Smart Hospital</strong> (May 2021 - Feb 2022)<br>
+                                → IT infrastructure · Server config · Network troubleshooting</p>
                             </div>
                         </div>
-                        
+
                         <div class="command-line">
                             <span class="prompt">$</span> <span class="command">systemctl status</span>
-                            <div class="output status-running">
-                                ● Active: running <br>
-                                ● Experience: 4+ years <br>
-                                ● Infrastructure: automated <br>
-                                ● Monitoring: enabled
+                            <div class="output">
+                                <pre>● Active: running
+● Experience: 4+ years
+● Infrastructure: automated
+● Monitoring: enabled</pre>
                             </div>
                         </div>
                     </div>
@@ -592,228 +164,375 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills">
+        <section id="skills" class="section">
             <div class="container">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <div class="terminal-btn close"></div>
-                            <div class="terminal-btn minimize"></div>
-                            <div class="terminal-btn maximize"></div>
-                        </div>
-                        <div class="terminal-title">skills.sh</div>
+                <div class="section-title" data-aos="fade-up">
+                    <h2>skills/</h2>
+                    <p class="subtitle">ls -la</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
+                        <ul>
+                            <li>AWS (EC2, VPC, S3, IAM, RDS)</li>
+                            <li>CloudFormation, Lambda</li>
+                            <li>CloudWatch, Route53</li>
+                        </ul>
                     </div>
-                    <div class="terminal-body">
-                        <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">ls -la skills/</span>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <h3><i class="fas fa-cogs"></i> DevOps Tools</h3>
+                        <ul>
+                            <li>Jenkins (CI/CD Pipelines)</li>
+                            <li>Docker, Docker Compose</li>
+                            <li>Kubernetes, kubeadm</li>
+                            <li>Terraform, Ansible</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <h3><i class="fas fa-server"></i> Systems</h3>
+                        <ul>
+                            <li>Linux (Ubuntu) & Windows Server</li>
+                            <li>Tomcat, Nagios</li>
+                            <li>VPN Configuration</li>
+                            <li>System Troubleshooting</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                        <h3><i class="fas fa-terminal"></i> Scripting</h3>
+                        <ul>
+                            <li>Bash/Shell</li>
+                            <li>YAML/JSON</li>
+                            <li>Python (basic)</li>
+                            <li>HCL (Terraform)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pipeline Section - DevOps Workflow -->
+<section id="pipeline" class="section">
+    <div class="container">
+        <div class="section-title" data-aos="fade-up">
+            <h2>pipeline/</h2>
+            <p class="subtitle">devops-workflow.sh</p>
+        </div>
+
+        <div class="terminal-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                </div>
+                <span class="terminal-title">devops_pipeline.log</span>
+            </div>
+
+            <div class="terminal-body">
+                <div class="command-line">
+                    <span class="prompt">$</span>
+                    <span class="command">cat pipeline.txt</span>
+
+                    <div class="output pipeline-flow">
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fab fa-github"></i></span>
+                            <span class="step-label">Code → GitHub</span>
+                            <span class="step-status">✓</span>
                         </div>
+                        <div class="pipeline-arrow">↓</div>
                         
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h3><i class="fas fa-cloud"></i> Cloud Platforms</h3>
-                                <ul>
-                                    <li>AWS (EC2, S3, IAM, VPC)</li>
-                                    <li>CloudFormation, Lambda</li>
-                                    <li>CloudWatch, RDS</li>
-                                    <li>Google Cloud Platform</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fas fa-code"></i> DevOps Tools</h3>
-                                <ul>
-                                    <li>Jenkins, GitHub Actions</li>
-                                    <li>Docker, Docker Compose</li>
-                                    <li>Kubernetes, Helm</li>
-                                    <li>Ansible, Terraform</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fas fa-server"></i> Systems & Administration</h3>
-                                <ul>
-                                    <li>Linux & Windows Server</li>
-                                    <li>Tomcat Server, Nagios</li>
-                                    <li>VPN Configuration</li>
-                                    <li>System Troubleshooting</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fas fa-terminal"></i> Scripting & Languages</h3>
-                                <ul>
-                                    <li>Python, Bash/Shell</li>
-                                    <li>YAML/JSON</li>
-                                    <li>HTML/CSS/JavaScript</li>
-                                    <li>Technical Documentation</li>
-                                </ul>
-                            </div>
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fab fa-jenkins"></i></span>
+                            <span class="step-label">Continuous Integration → Jenkins / GitHub Actions</span>
+                            <span class="step-status">✓</span>
                         </div>
+                        <div class="pipeline-arrow">↓</div>
                         
-                        <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">echo "All systems operational"</span>
-                            <div class="output status-running">✓ All skills actively maintained and updated</div>
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fab fa-docker"></i></span>
+                            <span class="step-label">Build & Containerization → Docker</span>
+                            <span class="step-status">✓</span>
+                        </div>
+                        <div class="pipeline-arrow">↓</div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fab fa-docker"></i></span>
+                            <span class="step-label">Container Registry → Docker Hub</span>
+                            <span class="step-status">✓</span>
+                        </div>
+                        <div class="pipeline-arrow">↓</div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fas fa-code"></i></span>
+                            <span class="step-label">Infrastructure Provisioning → Terraform</span>
+                            <span class="step-status">✓</span>
+                        </div>
+                        <div class="pipeline-arrow">↓</div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fas fa-dharmachakra"></i></span>
+                            <span class="step-label">Container Orchestration → Kubernetes</span>
+                            <span class="step-status">✓</span>
+                        </div>
+                        <div class="pipeline-arrow">↓</div>
+                        
+                        <div class="pipeline-step">
+                            <span class="step-icon"><i class="fab fa-aws"></i></span>
+                            <span class="step-label">Cloud Platform → AWS</span>
+                            <span class="step-status">✓</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live pipeline status indicator -->
+                <div class="command-line mt-4">
+                    <span class="prompt">$</span>
+                    <span class="command">systemctl status pipeline</span>
+                    <div class="output pipeline-status">
+                        <span class="status-indicator running"></span> Pipeline: <span class="status-text">running</span> | Last build: <span class="last-build">#42</span> | Duration: <span class="build-duration">2m 34s</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>projects/</h2>
+                    <p class="subtitle">ls -la featured-projects/</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fab fa-jenkins"></i>
+                            <h3>CI/CD Pipeline for Node.js App</h3>
+                            <p>Automated Docker build & deploy on AWS EC2 using Jenkins. Zero-downtime updates on every GitHub push.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">AWS EC2</span>
+                            </div>
+                            <a href="https://github.com/junaidtyagi9555/jenkins-cicd-pipeline" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fab fa-docker"></i>
+                            <h3>Multi-Container Microservices</h3>
+                            <p>Orchestrated Flask app + MySQL database using Docker Compose with internal networking for secure communication.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <a href="https://github.com/junaidtyagi9555/docker-microservices-app" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fas fa-dharmachakra"></i>
+                            <h3>Scalable K8s Deployment</h3>
+                            <p>Deployed and managed applications on Kubernetes using Deployments, Services, ConfigMaps, and kubectl.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">kubectl</span>
+                                <span class="tech-tag">YAML</span>
+                            </div>
+                            <a href="https://github.com/junaidtyagi9555/kubernetes-production-deployment" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fas fa-code"></i>
+                            <h3>Production-Ready AWS Infrastructure</h3>
+                            <p>Provisioned custom VPC with public/private subnets, Internet Gateway, and EC2 instances using Terraform IaC.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">VPC</span>
+                            </div>
+                            <a href="https://github.com/junaidtyagi9555/terraform-aws-infrastructure" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
             <div class="container">
-                <div class="terminal-window">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>certifications/</h2>
+                    <p class="subtitle">ls -la badges/</p>
+                </div>
+
+                <div class="terminal-card" data-aos="fade-up">
                     <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <div class="terminal-btn close"></div>
-                            <div class="terminal-btn minimize"></div>
-                            <div class="terminal-btn maximize"></div>
+                        <div class="terminal-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
                         </div>
-                        <div class="terminal-title">projects.sh</div>
+                        <div class="terminal-title">badges.sh</div>
                     </div>
                     <div class="terminal-body">
                         <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">cd projects/ && ls -la</span>
-                        </div>
-                        
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h3><i class="fab fa-aws"></i> Static Website on S3</h3>
-                                <ul>
-                                    <li>Configured S3 for static website hosting</li>
-                                    <li>Implemented security best practices</li>
-                                    <li>Enabled versioning and lifecycle policies</li>
-                                    <li>Integrated with CloudFront CDN</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fas fa-cogs"></i> Automated EC2 Deployment</h3>
-                                <ul>
-                                    <li>Created CloudFormation templates</li>
-                                    <li>Automated infrastructure provisioning</li>
-                                    <li>Implemented auto-scaling groups</li>
-                                    <li>Configured load balancing</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fab fa-docker"></i> Docker Applications</h3>
-                                <ul>
-                                    <li>Containerized single-tier application</li>
-                                    <li>Docker build, test, and deploy pipeline</li>
-                                    <li>Multi-container app with Docker Compose</li>
-                                    <li>Image optimization and security scanning</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="skill-category">
-                                <h3><i class="fas fa-network-wired"></i> IT Automation</h3>
-                                <ul>
-                                    <li>Automated IT asset monitoring with CloudWatch</li>
-                                    <li>VPN and software license management</li>
-                                    <li>Workflow automation with AWS Lambda</li>
-                                    <li>Backup and disaster recovery setup</li>
-                                </ul>
-                            </div>
+                            <span class="prompt">$</span> <span class="command">curl -s credly.com/users/junaid-tyagi | jq '.badges'</span>
+                            <div class="output">Found 5 verified badge(s) · Issued by AWS & Cisco</div>
                         </div>
                     </div>
+                </div>
+
+                <div class="credly-badges-grid">
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="credly-badge-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://images.credly.com/images/f5095707-7683-4886-940c-3e8e4a2085ca/blob" alt="AWS Educate Networking">
+                        <p>AWS Educate Networking</p>
+                        <span class="badge-issuer">Amazon Web Services</span>
+                        <span class="badge-date"><i class="fas fa-calendar-alt"></i> Apr 2025</span>
+                    </a>
+
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="credly-badge-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://images.credly.com/images/e51a8579-188d-4363-8ed1-12ad164ef57b/blob" alt="AWS Cloud 101">
+                        <p>AWS Educate Cloud 101</p>
+                        <span class="badge-issuer">Amazon Web Services</span>
+                        <span class="badge-date"><i class="fas fa-calendar-alt"></i> Apr 2025</span>
+                    </a>
+
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="credly-badge-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://images.credly.com/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob" alt="AWS Gen AI">
+                        <p>AWS Educate Gen AI</p>
+                        <span class="badge-issuer">Amazon Web Services</span>
+                        <span class="badge-date"><i class="fas fa-calendar-alt"></i> Nov 2025</span>
+                    </a>
+
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="credly-badge-card" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.credly.com/size/340x340/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png" alt="Python Essentials">
+                        <p>Python Essentials 1</p>
+                        <span class="badge-issuer">Cisco</span>
+                        <span class="badge-date"><i class="fas fa-calendar-alt"></i> Feb 2026</span>
+                    </a>
+
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="credly-badge-card" data-aos="fade-up" data-aos-delay="500">
+                        <img src="https://images.credly.com/images/b870667f-00a3-48d7-b988-9c02b441b883/image.png" alt="AWS Well-Architected">
+                        <p>AWS Well-Architected</p>
+                        <span class="badge-issuer">Amazon Web Services</span>
+                        <span class="badge-date"><i class="fas fa-calendar-alt"></i> 2025</span>
+                    </a>
+                </div>
+
+                <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.credly.com/users/junaid-tyagi" target="_blank" class="btn-outline">
+                        <i class="fas fa-external-link-alt"></i> View All on Credly
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
+        <section id="contact" class="section">
             <div class="container">
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <div class="terminal-btn close"></div>
-                            <div class="terminal-btn minimize"></div>
-                            <div class="terminal-btn maximize"></div>
+                <div class="section-title" data-aos="fade-up">
+                    <h2>contact/</h2>
+                    <p class="subtitle">./send_message.sh</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="contact-form" data-aos="fade-right">
+                            <form id="emailForm">
+                                <div class="form-group">
+                                    <label><i class="fas fa-user"></i> Name</label>
+                                    <input type="text" class="form-control" name="name" required placeholder="John Doe">
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fas fa-envelope"></i> Email</label>
+                                    <input type="email" class="form-control" name="email" required placeholder="john@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fas fa-tag"></i> Subject</label>
+                                    <input type="text" class="form-control" name="subject" required placeholder="DevOps Opportunity">
+                                </div>
+
+                                <div class="form-group">
+                                    <label><i class="fas fa-comment"></i> Message</label>
+                                    <textarea class="form-control" name="message" rows="4" required placeholder="Hello Junaid, I'd like to discuss..."></textarea>
+                                </div>
+
+                                <button type="submit" class="btn-primary w-100">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+
+                                <div id="formMessage" class="mt-3 text-center"></div>
+                            </form>
                         </div>
-                        <div class="terminal-title">contact.sh</div>
                     </div>
-                    <div class="terminal-body">
-                        <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">./send_message.sh</span>
-                            <div class="output">
-                                <p>Ready to receive your message...</p>
-                                <p>Fill the form below to connect about DevOps opportunities</p>
+
+                    <div class="col-lg-6">
+                        <div class="contact-info" data-aos="fade-left" data-aos-delay="200">
+                            <div class="command-line mb-4">
+                                <span class="prompt">$</span> <span class="command">cat contact_info.txt</span>
                             </div>
-                        </div>
-                        
-                        <form id="emailForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name"><i class="fas fa-user"></i> Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Enter your name...">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-                                <input type="text" id="subject" name="subject" required placeholder="DevOps Opportunity | Project Discussion">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message"><i class="fas fa-comment"></i> Message</label>
-                                <textarea id="message" name="message" required placeholder="Hello, I'd like to discuss..."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="terminal-btn-submit" id="submitBtn">
-                                <i class="fas fa-paper-plane"></i> Send Message
-                            </button>
-                            
-                            <button type="button" id="downloadResumeBtn" class="download-resume-btn">
-                                <i class="fas fa-download"></i> Download Resume
-                            </button>
-                            
-                            <div id="formMessage" class="form-message"></div>
-                        </form>
-                        
-                        <div class="command-line" style="margin-top: 2rem;">
-                            <span class="prompt">$</span> <span class="command">cat contact_info.txt</span>
-                            <div class="contact-items">
-                                <div class="contact-item">
-                                    <i class="fab fa-linkedin"></i>
-                                    <div>
-                                        <a href="https://www.linkedin.com/in/junaid-tyagi-8379b5225" target="_blank">LinkedIn Profile</a>
-                                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.25rem;">Connect professionally</p>
-                                    </div>
+
+                            <a href="https://www.linkedin.com/in/junaid-tyagi-8379b5225" target="_blank" class="contact-item">
+                                <i class="fab fa-linkedin-in"></i>
+                                <div class="info">
+                                    <h4>LinkedIn</h4>
+                                    <p>/in/junaid-tyagi</p>
                                 </div>
-                                <div class="contact-item">
-                                    <i class="fab fa-github"></i>
-                                    <div>
-                                        <a href="https://github.com/junaidtyagi9555/profile-portfolio" target="_blank">GitHub Portfolio</a>
-                                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.25rem;">View my projects</p>
-                                    </div>
+                            </a>
+
+                            <a href="https://github.com/junaidtyagi9555" target="_blank" class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <div class="info">
+                                    <h4>GitHub</h4>
+                                    <p>junaidtyagi9555</p>
                                 </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-envelope"></i>
-                                    <div>
-                                        <a href="mailto:junaidtyagi9555@gmail.com">junaidtyagi9555@gmail.com</a>
-                                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.25rem;">Email directly</p>
-                                    </div>
+                            </a>
+
+                            <a href="mailto:junaidtyagi9555@gmail.com" class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <h4>Email</h4>
+                                    <p>junaidtyagi9555@gmail.com</p>
                                 </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-phone"></i>
-                                    <div>
-                                        <a href="tel:+919555888536">+91-9555888536</a>
-                                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.25rem;">Call or WhatsApp</p>
-                                    </div>
+                            </a>
+
+                            <a href="tel:+919555888536" class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="info">
+                                    <h4>Phone</h4>
+                                    <p>+91-9555888536</p>
                                 </div>
-                                <div class="contact-item">
-                                    <i class="fas fa-globe"></i>
-                                    <div>
-                                        <a href="https://junaidtyagi.netlify.app" target="_blank">junaidtyagi.netlify.app</a>
-                                        <p style="font-size: 0.9rem; color: #888; margin-top: 0.25rem;">Portfolio Website</p>
-                                    </div>
+                            </a>
+
+                            <a href="https://junaidtyagi.netlify.app" target="_blank" class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <div class="info">
+                                    <h4>Website</h4>
+                                    <p>junaidtyagi.netlify.app</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -825,38 +544,40 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="terminal-window" style="max-width: 600px; margin: 0 auto;">
+                <div class="terminal-card" style="max-width: 500px; margin: 0 auto;" data-aos="fade-up">
                     <div class="terminal-header">
-                        <span class="terminal-title">status.sh</span>
+                        <div class="terminal-dots">
+                            <div class="terminal-dot dot-red"></div>
+                            <div class="terminal-dot dot-yellow"></div>
+                            <div class="terminal-dot dot-green"></div>
+                        </div>
+                        <div class="terminal-title">status.sh</div>
                     </div>
                     <div class="terminal-body">
                         <div class="command-line">
                             <span class="prompt">$</span> <span class="command">uptime</span>
                             <div class="output">System up: 24/7 | Last deploy: <span id="currentDate"></span></div>
                         </div>
-                        
-                        <div class="command-line">
-                            <span class="prompt">$</span> <span class="command">echo "Connect with me:"</span>
-                        </div>
-                        
+
                         <div class="footer-links">
                             <a href="https://www.linkedin.com/in/junaid-tyagi-8379b5225" target="_blank" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/junaidtyagi9555/profile-portfolio" target="_blank" aria-label="GitHub">
+                            <a href="https://github.com/junaidtyagi9555" target="_blank" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                             <a href="mailto:junaidtyagi9555@gmail.com" aria-label="Email">
                                 <i class="fas fa-envelope"></i>
                             </a>
-                            <a href="tel:+919555888536" aria-label="Phone">
-                                <i class="fas fa-phone"></i>
-                            </a>
                         </div>
-                        
+
                         <div class="command-line">
-                            <span class="prompt">$</span> <span class="command"></span>
+                            <span class="prompt">$</span> <span class="command">echo "© 2025"</span>
                             <div class="output">© <span id="currentYear"></span> Junaid Alam Tyagi. All systems operational.</div>
+                        </div>
+
+                        <div class="credits">
+                            Designed with <span>♥</span> using terminal aesthetics
                         </div>
                     </div>
                 </div>
@@ -864,137 +585,14 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main JavaScript (separate file) -->
     <script src="script.js"></script>
-    
-    <!-- Inline JavaScript for critical functionality -->
-    <script>
-        // Critical JavaScript that must run immediately
-        document.addEventListener('DOMContentLoaded', function() {
-            // Hide loading screen
-            const loading = document.getElementById('loading');
-            if (loading) {
-                setTimeout(() => {
-                    loading.classList.add('hidden');
-                    setTimeout(() => {
-                        loading.style.display = 'none';
-                    }, 500);
-                }, 1000);
-            }
-            
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navLinks = document.getElementById('navLinks');
-            
-            if (mobileMenuBtn && navLinks) {
-                mobileMenuBtn.addEventListener('click', function() {
-                    navLinks.classList.toggle('active');
-                    mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
-                        ? '<i class="fas fa-times"></i>' 
-                        : '<i class="fas fa-bars"></i>';
-                });
-                
-                // Close menu when clicking outside
-                document.addEventListener('click', function(event) {
-                    if (!navLinks.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                        navLinks.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                });
-                
-                // Close menu when clicking a link
-                navLinks.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        navLinks.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    });
-                });
-            }
-            
-            // Set current date and year
-            const now = new Date();
-            const dateStr = now.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-            });
-            
-            const currentDateEl = document.getElementById('currentDate');
-            const currentYearEl = document.getElementById('currentYear');
-            
-            if (currentDateEl) currentDateEl.textContent = dateStr;
-            if (currentYearEl) currentYearEl.textContent = now.getFullYear();
-            
-            // Hero typing animation
-            const heroTitle = document.getElementById('heroTitle');
-            if (heroTitle) {
-                const text = heroTitle.textContent;
-                heroTitle.textContent = '';
-                
-                let i = 0;
-                function typeWriter() {
-                    if (i < text.length) {
-                        heroTitle.textContent += text.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, 50);
-                    }
-                }
-                
-                setTimeout(typeWriter, 500);
-            }
-            
-            // Simple scroll to top button (optional)
-            const scrollToTopBtn = document.createElement('button');
-            scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-            scrollToTopBtn.className = 'scroll-to-top';
-            scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
-            scrollToTopBtn.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                background: var(--terminal-green);
-                color: var(--bg-dark);
-                border: none;
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                font-size: 1.2rem;
-                cursor: pointer;
-                opacity: 0;
-                transform: translateY(20px);
-                transition: all 0.3s;
-                z-index: 99;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            `;
-            
-            document.body.appendChild(scrollToTopBtn);
-            
-            // Show/hide scroll to top button
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) {
-                    scrollToTopBtn.style.opacity = '1';
-                    scrollToTopBtn.style.transform = 'translateY(0)';
-                } else {
-                    scrollToTopBtn.style.opacity = '0';
-                    scrollToTopBtn.style.transform = 'translateY(20px)';
-                }
-            });
-            
-            scrollToTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-        
-        // Error handling for older browsers
-        window.onerror = function(msg, url, lineNo, columnNo, error) {
-            console.log('Error:', msg, url, lineNo, columnNo, error);
-            return false;
-        };
-    </script>
 </body>
 </html>
